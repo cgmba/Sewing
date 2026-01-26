@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SewSimple | About Us</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background: #fafafa;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      background: #fff;
+      border-bottom: 1px solid #e5e5e5;
+      padding: 1rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    header h1 {
+      color: #c25b7c;
+      font-size: 1.4rem;
+    }
+
+    nav {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #555;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #c25b7c;
+    }
+
+    /* ===== MOBILE MENU ICON ===== */
+    .menu-toggle {
+      display: none;
+      font-size: 1.8rem;
+      cursor: pointer;
+      color: #555;
+    }
+
+    /* ===== PAGE HEADER ===== */
+    .page-header {
+      background: linear-gradient(to right, #fbe3ea, #fff);
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    .page-header h2 {
+      font-size: 2.2rem;
+      color: #c25b7c;
+      margin-bottom: 0.5rem;
+    }
+
+    /* ===== ABOUT CONTENT ===== */
+    .about-content {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 2rem;
+    }
+
+    .about-section {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      margin-bottom: 2rem;
+    }
+
+    .about-section h3 {
+      color: #c25b7c;
+      margin-bottom: 0.75rem;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: #fff;
+      border-top: 1px solid #e5e5e5;
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.9rem;
+      color: #777;
+      margin-top: 3rem;
+    }
+
+    /* ===== MOBILE RESPONSIVENESS ===== */
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      nav {
+        display: none;
+        flex-direction: column;
+        background: #fff;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        border-top: 1px solid #e5e5e5;
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      nav a {
+        padding: 1rem;
+        border-bottom: 1px solid #f0f0f0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header>
+    <h1>SewSimple</h1>
+
+    <div class="menu-toggle" id="menuToggle">☰</div>
+
+    <nav id="navMenu">
+      <a href="home1.html">Home</a>
+      <a href="patterns.html">Patterns</a>
+      <a href="works.html">How It Works</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- ===== PAGE HEADER ===== -->
+  <section class="page-header">
+    <h2>About SewSimple</h2>
+    <p>Designed for makers who love sewing and creativity.</p>
+  </section>
+
+  <!-- ===== ABOUT CONTENT ===== -->
+  <section class="about-content">
+    <div class="about-section">
+      <h3>Who We Are</h3>
+      <p>
+        SewSimple is an online platform offering beautifully designed PDF sewing
+        patterns for personal, non-commercial use. We believe sewing should be
+        accessible, enjoyable, and inspiring for everyone.
+      </p>
+    </div>
+
+    <div class="about-section">
+      <h3>Our Mission</h3>
+      <p>
+        Our mission is to empower sewing enthusiasts with easy-to-follow
+        patterns that help bring creative ideas to life — from beginners to
+        experienced makers.
+      </p>
+    </div>
+
+    <div class="about-section">
+      <h3>Personal Use Only</h3>
+      <p>
+        All patterns available on SewSimple are intended strictly for personal,
+        non-commercial use. This helps protect designers and maintain fairness.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>© 2026 SewSimple. Patterns are for personal, non-commercial use only.</p>
+  </footer>
+
+  <!-- ===== MOBILE MENU SCRIPT ===== -->
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navMenu');
+
+    menuToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
+  </script>
+
+</body>
+</html>

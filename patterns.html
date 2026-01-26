@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SewSimple | Sewing Patterns</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background: #fafafa;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background: #fff;
+      border-bottom: 1px solid #e5e5e5;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 { color: #c25b7c; }
+    nav a {
+      margin-left: 1.5rem;
+      text-decoration: none;
+      color: #555;
+      font-weight: 500;
+    }
+    nav a:hover { color: #c25b7c; }
+
+    .page-header {
+      background: linear-gradient(to right, #fbe3ea, #fff);
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+    .page-header h2 {
+      font-size: 2.4rem;
+      color: #c25b7c;
+      margin-bottom: 0.5rem;
+    }
+
+    .filters {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .filters select {
+      padding: 0.6rem 1rem;
+      border-radius: 6px;
+      border: 1px solid #ddd;
+      font-size: 0.95rem;
+    }
+
+    .patterns {
+      max-width: 1200px;
+      margin: auto;
+      padding: 2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+    }
+    .pattern-card {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+    .pattern-card img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      cursor: zoom-in;
+    }
+    .pattern-info {
+      padding: 1rem;
+    }
+    .pattern-info h3 { margin-bottom: 0.25rem; }
+    .tag {
+      display: inline-block;
+      background: #fbe3ea;
+      color: #a64866;
+      padding: 0.2rem 0.6rem;
+      border-radius: 12px;
+      font-size: 0.75rem;
+      margin-top: 0.5rem;
+    }
+
+    footer {
+      background: #fff;
+      border-top: 1px solid #e5e5e5;
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.9rem;
+      color: #777;
+      margin-top: 3rem;
+    }
+
+    /* Lightbox */
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.85);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
+    }
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+    }
+
+    @media (max-width: 768px) {
+      header { flex-direction: column; }
+      nav { margin-top: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>SewSimple</h1>
+  <nav>
+    <a href="home1.html">Home</a>
+    <a href="patterns.html">Patterns</a>
+    <a href="works.html">How It Works</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<section class="page-header">
+  <h2>All Sewing Patterns</h2>
+  <p>Browse downloadable PDF sewing patterns for personal, non-commercial use.</p>
+</section>
+
+<section class="filters">
+  <select>
+    <option>Category</option>
+    <option>Dresses</option>
+    <option>Tops</option>
+    <option>Skirts</option>
+    <option>Accessories</option>
+  </select>
+  <select>
+    <option>Difficulty</option>
+    <option>Beginner</option>
+    <option>Intermediate</option>
+  </select>
+  <select>
+    <option>Size Range</option>
+    <option>XS – S</option>
+    <option>M – L</option>
+    <option>XL – XXL</option>
+  </select>
+</section>
+
+<section class="patterns">
+  <div class="pattern-card">
+    <img src="images/dress.jpeg" alt="Simple Dress Pattern">
+    <div class="pattern-info">
+      <h3>Simple Dress</h3>
+      <p>Lightweight dress pattern with clear instructions.</p>
+      <span class="tag">Beginner</span>
+    </div>
+  </div>
+
+  <div class="pattern-card">
+    <img src="images/blouse.png" alt="Classic Blouse Pattern">
+    <div class="pattern-info">
+      <h3>Classic Blouse</h3>
+      <p>Timeless blouse with multiple size options.</p>
+      <span class="tag">Beginner</span>
+    </div>
+  </div>
+
+  <div class="pattern-card">
+    <img src="images/cloth.jpeg" alt="Everyday Cloth Pattern">
+    <div class="pattern-info">
+      <h3>Everyday Cloth</h3>
+      <p>Comfortable skirt pattern for daily wear.</p>
+      <span class="tag">Beginner</span>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 SewSimple. Patterns are for personal, non-commercial use only.</p>
+</footer>
+
+<div class="lightbox" id="lightbox">
+  <img src="" alt="Enlarged pattern">
+</div>
+
+<script>
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = lightbox.querySelector('img');
+
+  document.querySelectorAll('.pattern-card img').forEach(img => {
+    img.addEventListener('click', () => {
+      lightboxImg.src = img.src;
+      lightbox.style.display = 'flex';
+    });
+  });
+
+  lightbox.addEventListener('click', () => {
+    lightbox.style.display = 'none';
+    lightboxImg.src = '';
+  });
+</script>
+
+</body>
+</html>

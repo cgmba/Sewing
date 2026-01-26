@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SewSimple | Contact Us</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background: #fafafa;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      background: #fff;
+      border-bottom: 1px solid #e5e5e5;
+      padding: 1rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    header h1 {
+      color: #c25b7c;
+      font-size: 1.4rem;
+    }
+
+    nav {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #555;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #c25b7c;
+    }
+
+    /* ===== MOBILE MENU ICON ===== */
+    .menu-toggle {
+      display: none;
+      font-size: 1.8rem;
+      cursor: pointer;
+      color: #555;
+    }
+
+    /* ===== PAGE HEADER ===== */
+    .page-header {
+      background: linear-gradient(to right, #fbe3ea, #fff);
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    .page-header h2 {
+      font-size: 2.2rem;
+      color: #c25b7c;
+      margin-bottom: 0.5rem;
+    }
+
+    /* ===== CONTACT CONTENT ===== */
+    .contact-container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 2rem;
+    }
+
+    .contact-card {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    .contact-card h3 {
+      color: #c25b7c;
+      margin-bottom: 1rem;
+    }
+
+    form {
+      display: grid;
+      gap: 1rem;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 0.8rem;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      font-size: 0.95rem;
+      font-family: inherit;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    button {
+      background: #c25b7c;
+      color: #fff;
+      border: none;
+      padding: 0.9rem;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #a64866;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: #fff;
+      border-top: 1px solid #e5e5e5;
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.9rem;
+      color: #777;
+      margin-top: 3rem;
+    }
+
+    /* ===== MOBILE RESPONSIVENESS ===== */
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      nav {
+        display: none;
+        flex-direction: column;
+        background: #fff;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        border-top: 1px solid #e5e5e5;
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      nav a {
+        padding: 1rem;
+        border-bottom: 1px solid #f0f0f0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header>
+    <h1>SewSimple</h1>
+
+    <div class="menu-toggle" id="menuToggle">☰</div>
+
+    <nav id="navMenu">
+      <a href="home1.html">Home</a>
+      <a href="patterns.html">Patterns</a>
+      <a href="works.html">How It Works</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- ===== PAGE HEADER ===== -->
+  <section class="page-header">
+    <h2>Contact Us</h2>
+    <p>Have questions or feedback? We’d love to hear from you.</p>
+  </section>
+
+  <!-- ===== CONTACT FORM ===== -->
+  <section class="contact-container">
+    <div class="contact-card">
+      <h3>Send Us a Message</h3>
+
+      <form>
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>© 2026 SewSimple. Patterns are for personal, non-commercial use only.</p>
+  </footer>
+
+  <!-- ===== MOBILE MENU SCRIPT ===== -->
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navMenu');
+
+    menuToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
+  </script>
+
+</body>
+</html>

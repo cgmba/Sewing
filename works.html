@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SewSimple | How It Works</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background: #fafafa;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background: #fff;
+      border-bottom: 1px solid #e5e5e5;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 { color: #c25b7c; }
+    nav a {
+      margin-left: 1.5rem;
+      text-decoration: none;
+      color: #555;
+      font-weight: 500;
+    }
+    nav a:hover { color: #c25b7c; }
+
+    .page-header {
+      background: linear-gradient(to right, #fbe3ea, #fff);
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+    .page-header h2 {
+      font-size: 2.4rem;
+      color: #c25b7c;
+      margin-bottom: 0.5rem;
+    }
+
+    .steps {
+      max-width: 1000px;
+      margin: 2rem auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      padding: 0 2rem;
+    }
+    .step-card {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      text-align: center;
+      transition: transform 0.2s ease;
+    }
+    .step-card:hover {
+      transform: translateY(-5px);
+    }
+    .step-card img {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+      margin-bottom: 1rem;
+    }
+    .step-card h3 {
+      color: #c25b7c;
+      margin-bottom: 0.5rem;
+    }
+
+    footer {
+      background: #fff;
+      border-top: 1px solid #e5e5e5;
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.9rem;
+      color: #777;
+      margin-top: 3rem;
+    }
+
+    @media (max-width: 768px) {
+      header { flex-direction: column; }
+      nav { margin-top: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>SewSimple</h1>
+  <nav>
+    <a href="home1.html">Home</a>
+    <a href="patterns.html">Patterns</a>
+    <a href="works.html">How It Works</a>
+    <a href="about.html">About</a>
+    <a href="contact">Contact</a>
+  </nav>
+</header>
+
+<section class="page-header">
+  <h2>How It Works</h2>
+  <p>Follow these simple steps to download and use your sewing patterns.</p>
+</section>
+
+<section class="steps">
+  <div class="step-card">
+    <img src="images/step1.png" alt="Step 1">
+    <h3>Browse Patterns</h3>
+    <p>Explore our collection of PDF sewing patterns by category, difficulty, and size.</p>
+  </div>
+  <div class="step-card">
+    <img src="images/step2.png" alt="Step 2">
+    <h3>Select & Download</h3>
+    <p>Choose the patterns you like and download them instantly for personal use.</p>
+  </div>
+  <div class="step-card">
+    <img src="images/step3.png" alt="Step 3">
+    <h3>Print & Sew</h3>
+    <p>Print your PDF patterns and start sewing your projects at home.</p>
+  </div>
+  <div class="step-card">
+    <img src="images/step4.png" alt="Step 4">
+    <h3>Share Your Creations</h3>
+    <p>Show off your finished projects on social media or with friends (non-commercial).</p>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 SewSimple. Patterns are for personal, non-commercial use only.</p>
+</footer>
+
+</body>
+</html>
